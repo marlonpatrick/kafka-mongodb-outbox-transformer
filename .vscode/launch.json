@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "OutboxTransformerApplication",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.github.marlonpatrick.kafka.mongodb.outbox.transformer.OutboxTransformerApplication",
+            "projectName": "kafka-mongodb-outbox-transformer",
+            "args": "",
+            "vmArgs": "-Djava.security.egd=file:/dev/./urandom -Duser.timezone=UTC -Dspring.profiles.active=dev"
+        }
+    ]
+}
