@@ -170,6 +170,6 @@ output.format.value=json
 value.converter=org.apache.kafka.connect.storage.StringConverter
 
 # This pipeline filter the supported operations and ensures the correct schema,
-# either in the insert/replace or in the update
+# either in the insert/replace or in the update operations
 pipeline=[{"$match":{"operationType": {"$in":[ "insert", "replace", "update"]}}}, {"$match": {"$or": [{"fullDocument.outbox":{"$exists":"true", "$type":"array", "$ne":[]} }, {"updateDescription.updatedFields.outbox":{"$exists":"true", "$type":"array", "$ne":[]}}]}}, {"$match":{"$or": [{"fullDocument.outbox._id":{"$exists":"true"}}, {"updateDescription.updatedFields.outbox._id":{"$exists":"true"}}]}},{"$match":{"$or": [{"fullDocument.outbox.createdAt":{"$exists":"true"}}, {"updateDescription.updatedFields.outbox.createdAt":{"$exists":"true"}}]}},{"$match":{"$or": [{"fullDocument.outbox.entityName":{"$exists":"true" }}, {"updateDescription.updatedFields.outbox.entityName":{"$exists":"true" }}]}}, {"$match":{"$or": [{"fullDocument.outbox.entityId":{"$exists":"true" }}, {"updateDescription.updatedFields.outbox.entityId":{"$exists":"true" }}]}},{"$match":{"$or": [{"fullDocument.outbox.messageName":{"$exists":"true"}}, {"updateDescription.updatedFields.outbox.messageName":{"$exists":"true"}}]}}, {"$match":{"$or": [{"fullDocument.outbox.payload":{"$exists":"true" }}, {"updateDescription.updatedFields.outbox.payload":{"$exists":"true" }}]}}]
 ```
