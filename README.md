@@ -4,7 +4,7 @@ This is a Kafka Streams application which is part of a implementation of [Transa
 
 The implementation overview is:
 
-1. Applications save data in MongoDB and add a "outbox" array field in your documents who will publish messages to Kafka. Example:
+1. Applications save data in MongoDB and add a "outbox" array field with messages that will be published to Kafka. Example:
 
 ```json
 {
