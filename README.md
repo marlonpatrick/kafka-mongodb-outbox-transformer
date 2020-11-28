@@ -6,7 +6,7 @@ This is a Kafka Streams application which is part of a implementation of [Transa
 
 1. Applications save data in MongoDB and add a "outbox" array field with messages that will be published to Kafka. Example:
 
-```json
+```javascript
 {
    "_id":"4c152a44-f49e-44f8-b266-5e79644f1513",
    "text":"this is an arbitraty field",
