@@ -29,7 +29,7 @@ This is a Kafka Streams application which is part of a implementation of [Transa
 
 2. Via Kafka Connect and MongoDB Kafka Connector, documents inserted/replaced/updated and containing a non-empty "outbox" array field will be published to Kafka in a first stage topic, let's call that topic "cdc.mongodb.outbox".
 
-3. **This Kafka Streams application (Outbox Transformer)**, will consume and process the previous topic "cdc.mongodb.outbox". The output will be one message for each element in the "outbox" array field in the original document. The destination topic for each message is determined by the field "targetTopic" in the outbox message. **These output messages are the messages that will be consumed by others client applications/microservices.**
+3. **This Kafka Streams application (Outbox Transformer)**, will consume and process the previous topic "cdc.mongodb.outbox". The output will be one message for each element in the "outbox" array field in the original document. The destination topic for each message is determined by the field "targetTopic" in the outbox message. **These output messages are the final messages ready to be consumed by others client applications/microservices.**
 
 ## Input Message Formats
 
