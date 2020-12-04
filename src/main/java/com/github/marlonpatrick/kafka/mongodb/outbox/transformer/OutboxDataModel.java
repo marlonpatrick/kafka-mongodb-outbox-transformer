@@ -31,7 +31,11 @@ class RawOutboxDocument {
 	UpdateDescription updateDescription;
 
 	OperationType operationType() {
-		return OperationType.valueOf(this.operationType.toUpperCase());
+		try {
+			return OperationType.valueOf(this.operationType.toUpperCase());
+		} catch (IllegalArgumentException e) {
+			throw new UnsupportedOperationException(String.format("The operationType %s is not supported.", this.operationType));
+		}
 	}
 }
 
@@ -115,6 +119,6 @@ class OutboxMessage {
 	@Getter
 	@Setter
 	Map<String, Object> payload;
+
+	// TODO: extra properties
 }
-
-

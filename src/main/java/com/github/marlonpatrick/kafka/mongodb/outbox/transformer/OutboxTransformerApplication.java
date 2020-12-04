@@ -42,7 +42,7 @@ public class OutboxTransformerApplication {
 			}
 
 			return completeDocument.fullDocument.outbox;
-		}).to((k, v, recordContext) -> v.targetTopic, Produced.valueSerde(new JsonSerde<>(OutboxMessage.class)));
+		}).to((k, v, recordContext) -> v.targetTopic, Produced.valueSerde(new JsonSerde<>(OutboxMessage.class).noTypeInfo()));
 
 		return stream;
 	}
