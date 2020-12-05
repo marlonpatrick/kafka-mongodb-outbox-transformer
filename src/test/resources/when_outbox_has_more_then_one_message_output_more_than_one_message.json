@@ -1,0 +1,60 @@
+{
+    "operationType":"insert",
+    "fullDocument":{
+       "_id":"documentTestMultiMessage",
+       "fieldN":"valueN",
+       "outbox":[
+          {
+             "_id":"message01",
+             "createdAt":"2020-12-01T22:06:09.843Z",
+             "entityName":"EntityTestMultiMessage",
+             "entityId":"documentTestMultiMessage",
+             "messageName":"MessageTestMultiMessage",
+             "targetTopic":"test.outbox.transformer.output.topic4",
+             "payload":{
+                "outboxFieldString":"outboxFieldMultiMessage",
+                "outboxFieldBoolean": true,
+                "outboxFieldInteger": 1,
+                "outboxFieldDouble": 3.5,
+                "outboxFieldDate": "2020-12-03",
+                "outboxFieldDateTime": "2020-12-04T13:01:09.567Z"
+            }
+          },
+          {
+            "_id":"message02",
+            "createdAt":"2019-01-17T10:45:22.853Z",
+            "entityName":"EntityTestMultiMessage",
+            "entityId":"documentTestMultiMessage",
+            "messageName":"MessageTestMultiMessage",
+            "targetTopic":"test.outbox.transformer.output.topic5",
+            "payload":{
+               "outboxFieldString":"outboxFieldMultiMessage",
+               "outboxFieldBoolean": true,
+               "outboxFieldInteger": 579,
+               "outboxFieldDouble": 100.5,
+               "outboxFieldDate": "2019-06-18",
+               "outboxFieldDateTime": "2019-08-30T18:19:48.490Z"
+           }
+         },
+         {
+            "_id": "message03",
+            "createdAt": "2021-11-28T15:00:01.123Z",
+            "entityName": "EntityTestMultiMessage",
+            "entityId": "documentTestMultiMessage",
+            "messageName": "MessageTestMultiMessage",
+            "targetTopic": "test.outbox.transformer.output.topic6",
+            "payload": {
+               "outboxFieldString": "outboxFieldMultiMessage",
+               "outboxFieldBoolean": true,
+               "outboxFieldInteger": 9,
+               "outboxFieldDouble": 2013.47,
+               "outboxFieldDate": "2020-02-29",
+               "outboxFieldDateTime": "2022-06-11T12:13:14.156Z"
+            }
+         }
+       ]
+    },
+    "documentKey":{
+       "_id":"documentTestMultiMessage"
+    }
+}

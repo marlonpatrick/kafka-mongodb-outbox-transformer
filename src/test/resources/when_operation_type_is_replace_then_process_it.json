@@ -1,0 +1,28 @@
+{
+   "operationType":"replace",
+   "fullDocument":{
+      "_id":"documentTestReplace",
+      "field1":"value1",
+      "outbox":[
+         {
+            "_id":"outboxTestReplace",
+            "createdAt":"2019-01-17T10:45:22.853Z",
+            "entityName":"EntityTestReplace",
+            "entityId":"documentTestReplace",
+            "messageName":"MessageTestReplace",
+            "targetTopic":"test.outbox.transformer.output.topic2",
+            "payload":{
+               "outboxFieldString":"outboxFieldReplace",
+               "outboxFieldBoolean": true,
+               "outboxFieldInteger": 579,
+               "outboxFieldDouble": 100.5,
+               "outboxFieldDate": "2019-06-18",
+               "outboxFieldDateTime": "2019-08-30T18:19:48.490Z"
+           }
+         }
+      ]
+   },
+   "documentKey":{
+      "_id":"documentTestReplace"
+   }
+}

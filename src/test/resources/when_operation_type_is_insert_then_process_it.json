@@ -1,0 +1,28 @@
+{
+    "operationType":"insert",
+    "fullDocument":{
+       "_id":"documentTestInsert",
+       "field1":"value1",
+       "outbox":[
+          {
+             "_id":"outboxTestInsert",
+             "createdAt":"2020-12-01T22:06:09.843Z",
+             "entityName":"EntityTestInsert",
+             "entityId":"documentTestInsert",
+             "messageName":"MessageTestInsert",
+             "targetTopic":"test.outbox.transformer.output.topic1",
+             "payload":{
+                "outboxFieldString":"outboxFieldInsert",
+                "outboxFieldBoolean": true,
+                "outboxFieldInteger": 1,
+                "outboxFieldDouble": 3.5,
+                "outboxFieldDate": "2020-12-03",
+                "outboxFieldDateTime": "2020-12-04T13:01:09.567Z"
+            }
+          }
+       ]
+    },
+    "documentKey":{
+       "_id":"documentTestInsert"
+    }
+}

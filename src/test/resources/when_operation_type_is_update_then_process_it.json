@@ -1,0 +1,29 @@
+{
+   "operationType": "update",
+   "fullDocument": {},
+   "updateDescription": {
+      "updatedFields": {
+         "outbox": [
+            {
+               "_id": "outboxTestUpdate",
+               "createdAt": "2021-11-28T15:00:01.123Z",
+               "entityName": "EntityTestUpdate",
+               "entityId": "documentTestUpdate",
+               "messageName": "MessageTestUpdate",
+               "targetTopic": "test.outbox.transformer.output.topic3",
+               "payload": {
+                  "outboxFieldString": "outboxFieldUpdate",
+                  "outboxFieldBoolean": true,
+                  "outboxFieldInteger": 9,
+                  "outboxFieldDouble": 2013.47,
+                  "outboxFieldDate": "2020-02-29",
+                  "outboxFieldDateTime": "2022-06-11T12:13:14.156Z"
+               }
+            }
+         ]
+      }
+   },
+   "documentKey": {
+      "_id": "documentTestUpdate"
+   }
+}
