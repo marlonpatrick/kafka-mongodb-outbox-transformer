@@ -223,7 +223,7 @@ This Outbox Transformer is not responsible for doing this, so it is necessary to
 
 Here are some possibilities:
 
-- The same application that produces data in MongoDB and populates the outbox field can clear it right after recording data in MongoDB. This is possible because once the document is saved in MongoDB this operation will generate a [Change Stream] (https://docs.mongodb.com/manual/changeStreams/) which is independent of future operations that occur in the same document. For example:
+- The same application that produces data in MongoDB and populates the outbox field can clear it right after recording data in MongoDB. This is possible because once the document is saved in MongoDB this operation will generate a [Change Stream](https://docs.mongodb.com/manual/changeStreams/) which is independent of future operations that occur in the same document. For example:
 
 ```java
 myEntity.addOutboxMessage(outboxMessage);
